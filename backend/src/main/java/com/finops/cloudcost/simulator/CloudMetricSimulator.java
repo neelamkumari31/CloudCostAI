@@ -17,8 +17,8 @@ public class CloudMetricSimulator {
     private final Random random = new Random();
     private static final String TOPIC = "cloud-metrics";
 
-    // This background task runs automatically every 60 seconds on your laptop
-    @Scheduled(fixedRate = 60000)
+    // This background task runs automatically every 10 seconds on your laptop
+    @Scheduled(fixedRate = 10000)
     public void produceMockMetrics() {
         String serverId = "i-" + UUID.randomUUID().toString().substring(0, 8);
         

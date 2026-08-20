@@ -10,7 +10,7 @@ function App() {
     try {
       setLoading(true);
       const response = await axios.get('http://localhost:8080/api/servers');
-      setServers(response.data);
+      setServers(response.data.slice().reverse());
     } catch (error) {
       console.error("Error fetching data from backend api:", error);
     } finally {
@@ -127,7 +127,7 @@ function App() {
                   </td>
                   <td style={{ padding: '15px' }}>
                     <span style={{ padding: '4px 10px', borderRadius: '20px', fontSize: '12px', fontWeight: '600', backgroundColor: server.status === 'APPROVED' ? '#dcfce7' : '#fef3c7', color: server.status === 'APPROVED' ? '#16a34a' : '#d97706' }}>
-                      <i>{server.status === 'PENDING_APPROVAL' ? 'pending approval' : server.status}</i>
+                      <i>{server.status === 'PENDING_APPROVAL' ? 'pending approval' : server.status === 'APPROVED' ? 'approved' : server.status === 'EXPIRED' ? 'expired' : server.status}</i>
 
                     </span>
                   </td>
