@@ -28,7 +28,7 @@ Navigate to your resources directory (`backend/src/main/resources/`) and create 
 ```properties
 # Create a file named: application-local.properties
 spring.ai.google.api-key=YOUR_ACTUAL_GEMINI_API_KEY
-spring.mail.username=YOUR_GMAIL_ACCOUNT@gmail.com
+spring.mail.username=YOUR_GMAIL_ADDRESS@gmail.com
 spring.mail.password=YOUR_16_CHARACTER_GMAIL_APP_PASSWORD
 ```
 
